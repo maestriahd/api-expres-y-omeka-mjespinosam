@@ -22,5 +22,5 @@ router.get('/', function(req, res) {
     }
   );
 });
-// exprta la ruta para ser consumida por la aplicación
+// exporta la ruta para ser consumida por la aplicación
 module.exports = router;
