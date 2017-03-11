@@ -4,11 +4,11 @@ var router = express.Router();
 var request = require('request');
 var async = require('async');
 
-const API_KEY = 'a175cddd460b9e4d35d5e962149e0256e16615d0';  // constante para guardar el API key del omeka
+const API_KEY = '2474132a4544266e8e227e862d420afea276f5af';  // constante para guardar el API key del omeka
 
 // objeto que guarda la configuración de la conexion al Omeka
 var server = {
-  baseUrl: 'http://192.169.250.12/~sandbox/omeka/api', // la URL del API (http://miomeka.org/api)
+  baseUrl: 'http://visionesdeamerica.omeka.net/api', // la URL del API (http://miomeka.org/api)
   uri: '',
   method: 'GET', // método que vamos a usar
   qs: {
@@ -51,7 +51,7 @@ router.get('/', function(req, res) {
       console.log('peticion a /collections');
       // actualiza la dirección del recurso a consultar en el objeto de
       // configuración de request
-      server.uri = '/collections/'+ '7';
+      server.uri = '/collections/'+ '';
       // ejecuta la llamada al servidor
       request(server, function (error, response, body) {
         // si hay un error lo reporta y para la ejecución de la cascada
